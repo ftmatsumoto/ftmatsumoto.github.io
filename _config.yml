@@ -1,0 +1,25 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           date
+# relative_permalinks: true
+
+# Setup
+title:               Felipe Matsumoto
+tagline:             'Blog'
+description:         'This is my blog'
+url:                 https://ftmatsumoto.github.io
+baseurl:             ''
+paginate:            5
+
+# About/contact
+author:
+  name:              Felipe Matsumoto
+  url:               https://ftmatsumoto.github.io
+  email:             felipetmatsumoto@yahoo.com.br
+
+site:
+  github.repo:       ftmatsumoto
+
+# Custom vars
+# version:             1.0.0
