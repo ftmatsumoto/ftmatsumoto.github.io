@@ -16,11 +16,9 @@ var width = 400,
     radius = 20;
 
 var div = d3.select("#eg_drag")
-            .style({
-              width: width + "px",
-              height: height + "px",
-              border: "1px solid black"
-            })
+            .style("width", width + "px")
+            .style("height", height + "px")
+            .style("border", "1px solid black")
 
 var container = div.append("svg")
                   .attr("width", width)
@@ -30,8 +28,7 @@ var container = div.append("svg")
 2\. Create a [new drag behavior](https://github.com/d3/d3-drag#drag). This object can be applied to the selected element via [selection.call](https://github.com/d3/d3-selection#selection_call). The drag behavior object will attach an event listener [selection.on](https://github.com/d3/d3-selection#selection_on) on the binded element.
 
 ```javascript
-var drag = d3.behavior.drag()
-             .origin(function(d) { return d; })
+var drag = d3.drag()
              .on("drag", function(d){
                 d3.select(this)
                   .attr("cx", d.x = Math.max(radius, Math.min(width - radius, d3.event.x)))
@@ -62,18 +59,15 @@ And this is the final result...
       radius = 20;
 
   var div = d3.select("#eg_drag")
-              .style({
-                width: width + "px",
-                height: height + "px",
-                border: "1px solid black"
-              })
+              .style("width", width + "px")
+              .style("height", height + "px")
+              .style("border", "1px solid black")
 
-  var container = div.append("svg")
+  var container = d3.select("#eg_drag").append("svg")
                     .attr("width", width)
                     .attr("height", height);
 
-  var drag = d3.behavior.drag()
-               .origin(function(d) { return d; })
+  var drag = d3.drag()
                .on("drag", function(d){
                   d3.select(this)
                     .attr("cx", d.x = Math.max(radius, Math.min(width - radius, d3.event.x)))
