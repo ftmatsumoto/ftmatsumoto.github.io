@@ -54,8 +54,8 @@ var circle = container
 
 And this is the final result...
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
 <div id="eg_drag"></div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
   var width = 400,
       height = 300,
