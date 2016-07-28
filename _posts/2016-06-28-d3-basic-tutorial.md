@@ -45,7 +45,6 @@ var circle = container
                   .attr("cx", function(d) { return d.x; })
                   .attr("cy", function(d) { return d.y; })
                   .attr("r", function(d) { return d.r; })
-                  .attr("background-color", "blue")
                   .call(drag)
 ```
 
@@ -81,7 +80,6 @@ And this is the final result...
                     .attr("cx", function(d) { return d.x; })
                     .attr("cy", function(d) { return d.y; })
                     .attr("r", function(d) { return d.r; })
-                    .attr("background-color", "blue")
                     .call(drag)
 
 </script>
