@@ -6,7 +6,7 @@ tags: [D3 tutorial, D3 bar chart]
 
 [D3](https://d3js.org/) is a JavaScript library for visualizing data in the browser.
 
-This is a basic tutorial on how to some simple horizontal bar charts using D3.
+This is a basic tutorial on how to create a simple horizontal bar chart using D3.
 The chart will render this data:
 
 ```javascript
