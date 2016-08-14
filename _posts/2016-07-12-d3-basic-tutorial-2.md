@@ -25,7 +25,7 @@ var data = [
 var width = 420,
     barHeight = 20;
 
-var chart = d3.select("#bar_chart")
+var chart = d3.select("#bar_chart_20160712")
     .append("svg")
     .attr("width", width)
     .attr("height", barHeight * data.length);
@@ -65,9 +65,10 @@ var bar = chart.selectAll("g")
 ```
 And this is the final result...
 
-<div id="bar_chart"></div>
+<div id="bar_chart_20160712"></div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
+(function(){
 var data = [
   {name: "first bar", value: 3},
   {name: "second bar", value: 7},
@@ -79,7 +80,7 @@ var data = [
 var width = 420,
     barHeight = 20;
 
-var chart = d3.select("#bar_chart")
+var chart = d3.select("#bar_chart_20160712")
     .append("svg")
     .attr("width", width)
     .attr("height", barHeight * data.length);
@@ -107,5 +108,7 @@ var bar = chart.selectAll("g")
         .attr("font-family", "sans-serif")
         .attr("text-anchor", "end")
         .text(function(d) { return d.value; });
+
+})()
 
 </script>

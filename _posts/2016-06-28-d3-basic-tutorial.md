@@ -15,12 +15,12 @@ var width = 400,
     height = 300,
     radius = 20;
 
-var div = d3.select("#eg_drag")
+var div = d3.select("#eg_drag_20160628")
             .style("width", width + "px")
             .style("height", height + "px")
             .style("border", "1px solid black")
 
-var container = div.append("svg")
+var container = d3.select("#eg_drag_20160628").append("svg")
                   .attr("width", width)
                   .attr("height", height);
 ```
@@ -50,19 +50,21 @@ var circle = container
 
 And this is the final result...
 
-<div id="eg_drag"></div>
+<div id="eg_drag_20160628"></div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
+
+(function(){
   var width = 400,
       height = 300,
       radius = 20;
 
-  var div = d3.select("#eg_drag")
+  var div = d3.select("#eg_drag_20160628")
               .style("width", width + "px")
               .style("height", height + "px")
               .style("border", "1px solid black")
 
-  var container = d3.select("#eg_drag").append("svg")
+  var container = d3.select("#eg_drag_20160628").append("svg")
                     .attr("width", width)
                     .attr("height", height);
 
@@ -73,7 +75,6 @@ And this is the final result...
                     .attr("cy", d.y = Math.max(radius, Math.min(height - radius, d3.event.y)));
                })
 
-
   var circle = container
                     .append("circle")
                     .data([{'x': width / 2, 'y': height / 2, 'r': radius}])
@@ -81,5 +82,7 @@ And this is the final result...
                     .attr("cy", function(d) { return d.y; })
                     .attr("r", function(d) { return d.r; })
                     .call(drag)
+
+})()
 
 </script>
