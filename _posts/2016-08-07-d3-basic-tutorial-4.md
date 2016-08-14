@@ -24,7 +24,7 @@ var margin = {top: 20, right: 30, bottom: 30, left: 50},
     height = 500 - margin.top - margin.bottom,
     radius = Math.min(width, height) / 2;
 
-var svg = d3.select("#pie_chart").append("svg")
+var svg = d3.select("#pie_chart_20160807").append("svg")
     .attr("width", width)
     .attr("height", height)
   .append("g")
@@ -80,7 +80,7 @@ g.append("text")
 
 And this is the final result...
 
-<div id="pie_chart"></div>
+<div id="pie_chart_20160807"></div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
@@ -95,7 +95,7 @@ And this is the final result...
       height = 500 - margin.top - margin.bottom,
       radius = Math.min(width, height) / 2;
 
-  var svg = d3.select("#pie_chart").append("svg")
+  var svg = d3.select("#pie_chart_20160807").append("svg")
       .attr("width", width)
       .attr("height", height)
     .append("g")
